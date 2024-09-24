@@ -6,12 +6,17 @@ class OnClickElements extends React.Component {
   }
 
   //add handler
+  }
+  handleClick(event) {
+    alert(`hey! you clicked: ${event.target.id}`);
+  }
+  render() {
 
   render() {
     // TODO: Your task is to add onClick listeners to each of the elements within the container-div <div>
     return (
       <div className="container-div">
-        <div id="div-element" >
+        <div id="div-element" onClick={ (e) => this.handleClick(e)}>
           I am DIV
         </div>
 
